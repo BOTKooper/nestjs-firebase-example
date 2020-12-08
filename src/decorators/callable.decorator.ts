@@ -1,5 +1,4 @@
 import 'reflect-metadata';
-import { AppController } from 'src/app.controller';
 
 interface ICallable {
   pattern: string;
@@ -41,7 +40,7 @@ const CheckDuplicates = (pattern: string, propertyKey: string) => {
 export function Callable(pattern: string) {
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   return function(
-    target: AppController,
+    target: any,
     propertyKey: string,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     descriptor: PropertyDescriptor,
